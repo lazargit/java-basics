@@ -1,0 +1,19 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/*root -> ROOTPANE */
+.root{
+	/*-fx-background-color: blue;*/
+	
+}
+
+.button{
+	-fx-background-color: red;
+}
+
+.text-field{
+	-fx-background-color: green;
+}
+
+.shadow{
+	
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 20, 0, 0, 0);
+}

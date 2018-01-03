@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane prefHeight="461.0" prefWidth="860.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdressController">
+	<center>
+      <TabPane>
+         <tabs>
+            <Tab text="Übersicht">
+               <content>
+            		<TableView editable="true" fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            			<columns>
+            				<TableColumn fx:id="idColumn" prefWidth="65.0" text="ID">
+            					<cellValueFactory>
+            						<PropertyValueFactory property="id" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn prefWidth="85.0" text="Vorname">
+            				<cellValueFactory>
+            						<PropertyValueFactory property="vorname" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn prefWidth="75.0" text="Nachname">
+            				<cellValueFactory>
+            						<PropertyValueFactory property="nachname" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn prefWidth="75.0" text="Ort">
+            				<cellValueFactory>
+            						<PropertyValueFactory property="ort" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn prefWidth="93.0" text="PLZ">
+            				<cellValueFactory>
+            						<PropertyValueFactory property="plz" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn prefWidth="105.0" text="Straße">
+            				<cellValueFactory>
+            						<PropertyValueFactory property="strasse" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn prefWidth="64.0" text="Telefon">
+            				<cellValueFactory>
+            						<PropertyValueFactory property="telefon" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn prefWidth="90.0" text="Mobil">
+            				<cellValueFactory>
+            						<PropertyValueFactory property="mobil" />
+            					</cellValueFactory>
+            				</TableColumn>
+            				<TableColumn editable="true" prefWidth="85.0" text="E-Mail">
+            				<cellValueFactory>
+            						<PropertyValueFactory property="email" />
+            					</cellValueFactory>
+            				</TableColumn>
+            			</columns>
+            		</TableView>
+               </content>
+            </Tab>
+            <Tab text="Neuer Datensatz">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="vornameField" layoutX="225.0" layoutY="40.0" prefHeight="25.0" prefWidth="225.0" promptText="Vorname" />
+                        <TextField fx:id="nachnameField" layoutX="225.0" layoutY="86.0" prefHeight="25.0" prefWidth="225.0" promptText="Nachname" />
+                        <TextField fx:id="plzField" layoutX="225.0" layoutY="133.0" prefHeight="25.0" prefWidth="225.0" promptText="PLZ" />
+                        <TextField fx:id="ortFielld" layoutX="225.0" layoutY="182.0" prefHeight="25.0" prefWidth="225.0" promptText="Ort" />
+                        <TextField fx:id="strasseField" layoutX="225.0" layoutY="229.0" prefHeight="25.0" prefWidth="225.0" promptText="Strasse" />
+                        <TextField fx:id="telefonField" layoutX="225.0" layoutY="281.0" prefHeight="25.0" prefWidth="225.0" promptText="Telefon" />
+                        <TextField fx:id="mobilField" layoutX="225.0" layoutY="329.0" prefHeight="25.0" prefWidth="225.0" promptText="Mobil" />
+                        <TextField fx:id="emailField" layoutX="225.0" layoutY="377.0" prefHeight="25.0" prefWidth="225.0" promptText="E-Mail" />
+                        <Button layoutX="524.0" layoutY="377.0" mnemonicParsing="false" onAction="#saveAction" text="Save" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+	</center>
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button mnemonicParsing="false" onAction="#refreshAction" text="Refresh" />
+            <Label fx:id="infoLAbel" alignment="CENTER" prefHeight="32.0" prefWidth="642.0" textFill="#eb1010">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+        </items>
+      </ToolBar>
+   </top>
+</BorderPane>

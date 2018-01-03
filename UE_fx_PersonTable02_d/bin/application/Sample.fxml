@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane prefHeight="401.0" prefWidth="624.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.SampleController">
+	<top>
+		<ToolBar prefHeight="40.0" prefWidth="200.0"
+			BorderPane.alignment="CENTER">
+			<items>
+				<TextField fx:id="vornameField" promptText="Vorname" />
+				<TextField fx:id="nachnameField" promptText="Nachname" />
+				<DatePicker fx:id="datePicker" promptText="Geburtsdatum" />
+				<Button mnemonicParsing="false" onAction="#saveAction"
+					prefHeight="25.0" prefWidth="68.0" text="Save" />
+			</items>
+		</ToolBar>
+	</top>
+	<center>
+		<TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0"
+			BorderPane.alignment="CENTER">
+			<columns>
+				<TableColumn prefWidth="239.0" text="Vorname">
+					<cellValueFactory>
+						<PropertyValueFactory property="vorname" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn prefWidth="183.0" text="Nachname">
+					<cellValueFactory>
+						<PropertyValueFactory property="nachname" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn prefWidth="169.0" text="Geburtsdatum">
+					<cellValueFactory>
+						<PropertyValueFactory property="geburtsdatum" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+		</TableView>
+	</center>
+</BorderPane>

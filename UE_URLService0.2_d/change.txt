@@ -1,0 +1,2 @@
+-URLService: SouceCode einer URL aneziegn
+-ExtractURLService: LinkList mit gefundenen Links füllen
